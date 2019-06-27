@@ -4,11 +4,9 @@ let canvas = document.querySelector("canvas"),
     canvas.height = screen.height
     canvas.width = screen.width
 
-    canvas.onclick = () => {
-        selectPictures(counter);
+    window.addEventListener('click', selectPictures)
+    function selectPictures() {
         counter++
-    }
-    function selectPictures(counter) {
         if (counter==1) russia()
         else if (counter==2) rostov()
             else italia()
